@@ -4,7 +4,13 @@ import re
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import spacy
 
+@st.cache_resource
+def load_model():
+    return spacy.load("en_core_web_sm")
+
+nlp = load_model()
 # Title
 st.title("📄 Resume Screening System")
 
