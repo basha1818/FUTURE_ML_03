@@ -3,4 +3,4 @@ pandas
 numpy
 scikit-learn
 nltk
-spacy
+spacy>=3.7.0,<3.8.0
