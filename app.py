@@ -5,10 +5,15 @@ import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import spacy
+import subprocess
 
 @st.cache_resource
 def load_model():
-    return spacy.load("en_core_web_sm")
+    try:
+        return spacy.load("en_core_web_sm")
+    except:
+        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+        return spacy.load("en_core_web_sm")
 
 nlp = load_model()
 # Title
