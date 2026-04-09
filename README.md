@@ -68,7 +68,7 @@ https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset
 ---
 
 ##  Live Demo
-(Add your Streamlit app link here)
+https://futureml03-h3bxsbs7qvuxmshvkmfyh7.streamlit.app/
 
 ---
 
